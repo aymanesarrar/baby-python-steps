@@ -11,29 +11,30 @@ s3iba = 2
 so3oba = input()
 
 if so3oba == 1 :
+  print('nta wa9ila kaytshab lik lhayat sahla l had daraja')
   while True :
     yourNumber = input()
-    if yourNumber == computer_number :
+    if int(yourNumber) == computer_number :
       print('you win')
       print('l9itih f ' + str(mohawala) + ' mohawalat hh')
       break
-    elif yourNumber < computer_number :
+    elif int(yourNumber) < computer_number :
       print('my number is bigger than yours try again')
       mohawala = mohawala + 1
-    elif yourNumber > computer_number :
+    elif int(yourNumber) > computer_number :
       print('your number is bigger than mine try again')
       mohawala = mohawala + 1
 else :
   while tries > 0 :
     yourNumber = input()
-    if yourNumber == computer_number :
+    if int(yourNumber) == computer_number :
       print('you win')
       print('l9itih f ' + str(tries) + ' mohawalat hh')
       break
-    elif yourNumber < computer_number :
+    elif int(yourNumber) < computer_number :
       print('my number is bigger than yours try again')
       tries = tries - 1
-    elif yourNumber > computer_number :
+    elif int(yourNumber) > computer_number :
       print('your number is bigger than mine try again')
       tries = tries - 1
   print('khsrti azbi wtf wch hmar')
