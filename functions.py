@@ -10,10 +10,11 @@ sahla = 1
 s3iba = 2
 so3oba = input()
 
-if so3oba == 1 :
+if int(so3oba) == 1 :
   print('nta wa9ila kaytshab lik lhayat sahla l had daraja')
   while True :
     yourNumber = input()
+    mohawala = mohawala + 1
     if int(yourNumber) == computer_number :
       print('you win')
       print('l9itih f ' + str(mohawala) + ' mohawalat hh')
