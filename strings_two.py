@@ -1,0 +1,12 @@
+str = 'My name is aymane'.split();
+print(' '.join(list(reversed(str))))
+name = input()
+print(name.center(20,'='))
+name = input()
+name = name.rjust(20)
+print(name)
+name = name.strip()
+print(name)
+name = input()
+print(name.strip('a'))
+print(name.replace('a', 'XYZ'))
