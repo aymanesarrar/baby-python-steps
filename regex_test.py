@@ -5,11 +5,11 @@ import re, pyperclip
 phone_regex = re.compile(r'''
 # 415-555-0000, 555-0000, (415) 555-0000, 555-0000 ext 12345, ext. 12345, x12345
 
-(((\d\d\d) | (\(\d\d\d\)))?      # area code (optional)
-(\s|- )                        # first separator
-\d\d\d                        # first 3 digits
--                            # separator
-\d\d\d                      # last 4 digits
+(((\d{3}) | (\(\d{3}\)))?      # area code (optional)
+(\s|- )                         # first separator
+\d{3}                         # first 3 digits
+-                             # separator
+\d\d\d                       # last 4 digits
 (((ext(\.)?\s)|x)           # extension optional
  (\d{2,5}))?)
 ''', re.VERBOSE)
@@ -32,3 +32,4 @@ print(all_phone_numbers)
 # Copy the extracted email/phone to the clipboard
 results = '\n'.join(extracted_email) + '\n' + '\n'.join(all_phone_numbers)
 print(results)
+pyperclip.copy(results)
